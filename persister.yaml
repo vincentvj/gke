@@ -1,0 +1,41 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: persister-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: persister
+  template:
+    metadata:
+      labels:
+        component: persister
+    spec:
+      containers:
+      - name: persister
+        image: vincent36/ecg-persister:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS
+          value: kafkaa:9092
+        - name: KAFKA_ADVERTISED_LISTENERS
+          value: "PLAINTEXT://localhost:9092"
+        - name: KAFKA_SECURITY_PROTOCOL
+          value: "SSL"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: persister
+  labels:
+    app: persister
+spec:
+  ports:
+  - port: 8080
+    name: client
+  selector:
+    app: persister
+  type: ClusterIP
