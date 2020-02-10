@@ -1,5 +1,5 @@
 ---
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: publisher-deployment
@@ -7,11 +7,12 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      component: publisher
+      name: publisher
   template:
     metadata:
       labels:
-        component: publisher
+        name: publisher
+        app: publisher
     spec:
       containers:
       - name: publisher

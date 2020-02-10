@@ -1,5 +1,5 @@
 ---
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: persister-deployment
@@ -7,11 +7,12 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      component: persister
+      name: persister
   template:
     metadata:
       labels:
-        component: persister
+        name: persister
+        app: persister
     spec:
       containers:
       - name: persister
