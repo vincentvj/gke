@@ -28,9 +28,9 @@ metadata:
 spec:
   ports:
   - port: 8081
-    name: client
+    name: publisher-port
     targetPort: 8081
-    protocol: HTTP
+    protocol: TCP
   selector:
     app: publisher
   type: LoadBalancer

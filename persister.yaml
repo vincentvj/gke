@@ -28,9 +28,9 @@ metadata:
 spec:
   ports:
   - port: 8080
-    name: client
+    name: persister-port
     targetPort: 8080
-    protocol: HTTP
+    protocol: TCP
   selector:
     app: persister
   type: LoadBalancer
