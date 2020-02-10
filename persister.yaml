@@ -34,5 +34,3 @@ spec:
     protocol: TCP
   selector:
     app: persister
-  type: LoadBalancer
-  loadBalancerIP: 34.87.99.224
