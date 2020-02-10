@@ -31,3 +31,4 @@ spec:
     name: client
   selector:
     app: publisher
+  type: LoadBalancer

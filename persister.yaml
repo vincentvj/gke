@@ -33,3 +33,4 @@ spec:
     name: client
   selector:
     app: persister
+  type: LoadBalancer
