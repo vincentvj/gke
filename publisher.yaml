@@ -35,3 +35,4 @@ spec:
   selector:
     app: publisher
   type: LoadBalancer
+  loadBalancerIP: 34.87.44.187

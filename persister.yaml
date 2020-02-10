@@ -35,3 +35,4 @@ spec:
   selector:
     app: persister
   type: LoadBalancer
+  loadBalancerIP: 34.87.99.224
