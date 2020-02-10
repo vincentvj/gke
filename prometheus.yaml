@@ -23,6 +23,10 @@ spec:
             subPath: prometheus.yml
         ports:
         - containerPort: 9090
+      volumes:
+        - name: config-volume
+          configMap:
+           name: prometheus-example-cm
 ---
 apiVersion: v1
 kind: Service
