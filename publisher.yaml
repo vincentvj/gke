@@ -1,0 +1,33 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: publisher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: publisher
+  template:
+    metadata:
+      labels:
+        component: publisher
+    spec:
+      containers:
+      - name: publisher
+        image: vincent36/ecg-publisher:latest
+        ports:
+        - containerPort: 8081
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: publisher
+  labels:
+    app: publisher
+spec:
+  ports:
+  - port: 8081
+    name: client
+  selector:
+    app: publisher
