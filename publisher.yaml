@@ -30,7 +30,7 @@ spec:
   - port: 8081
     name: client
     targetPort: 8081
-    protocol: TCP
+    protocol: HTTP
   selector:
     app: publisher
   type: LoadBalancer

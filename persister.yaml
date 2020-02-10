@@ -30,7 +30,7 @@ spec:
   - port: 8080
     name: client
     targetPort: 8080
-    protocol: TCP
+    protocol: HTTP
   selector:
     app: persister
   type: LoadBalancer
