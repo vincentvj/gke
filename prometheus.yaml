@@ -17,16 +17,16 @@ spec:
       containers:
       - name: prometheus
         image: prom/prometheus
-        volumeMounts:
-          - name: config-volume
-            mountPath: /etc/prometheus/prometheus.yml
-            subPath: prometheus.yml
+        # volumeMounts:
+        #   - name: config-volume
+        #     mountPath: /etc/prometheus/prometheus.yml
+        #     subPath: prometheus.yml
         ports:
         - containerPort: 9090
-      volumes:
-        - name: config-volume
-          configMap:
-           name: prometheus-example-cm
+      # volumes:
+      #   - name: config-volume
+      #     configMap:
+      #      name: prometheus-configmap
 ---
 apiVersion: v1
 kind: Service
