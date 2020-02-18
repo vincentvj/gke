@@ -19,8 +19,8 @@ spec:
         image: digitalwonderland/zookeeper
         resources:
           requests:
-            memory: "1000Mi"
-            cpu: "500m"
+            memory: "800Mi"
+            cpu: "400m"
         ports:
         - containerPort: 2181
         env:
@@ -54,8 +54,8 @@ spec:
         image: digitalwonderland/zookeeper
         resources:
           requests:
-            memory: "1000Mi"
-            cpu: "500m"
+            memory: "800Mi"
+            cpu: "400m"
         ports:
         - containerPort: 2181
         env:
@@ -89,8 +89,8 @@ spec:
         image: digitalwonderland/zookeeper
         resources:
           requests:
-            memory: "1000Mi"
-            cpu: "500m"
+            memory: "800Mi"
+            cpu: "400m"
         ports:
         - containerPort: 2181
         env:
