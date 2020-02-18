@@ -90,7 +90,7 @@ spec:
         resources:
           requests:
             memory: "2000Mi"
-            cpu: "1000m"
+            cpu: "500m"
         ports:
         - containerPort: 2181
         env:

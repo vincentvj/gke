@@ -20,7 +20,7 @@ spec:
         resources:
           requests:
             memory: "2000Mi"
-            cpu: "500m"
+            cpu: "250m"
         ports:
         - containerPort: 8080
 ---
