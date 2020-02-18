@@ -19,7 +19,7 @@ spec:
         image: wincentrtz/skripsi-web-socket
         resources:
           requests:
-            memory: "3000Mi"
+            memory: "2000Mi"
             cpu: "250m"
         ports:
         - containerPort: 3000
