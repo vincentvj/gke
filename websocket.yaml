@@ -17,6 +17,10 @@ spec:
       containers:
       - name: web-socket
         image: wincentrtz/skripsi-web-socket
+        resources:
+          requests:
+            memory: "3000Mi"
+            cpu: "500m"
         ports:
         - containerPort: 3000
 ---

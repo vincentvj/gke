@@ -17,6 +17,10 @@ spec:
       containers:
       - name: persister
         image: vincent36/ecg-persister:latest
+        resources:
+          requests:
+            memory: "2000Mi"
+            cpu: "500m"
         ports:
         - containerPort: 8080
 ---

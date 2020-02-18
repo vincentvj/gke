@@ -17,6 +17,10 @@ spec:
       containers:
       - name: publisher
         image: vincent36/ecg-publisher:latest
+        resources:
+          requests:
+            memory: "4000Mi"
+            cpu: "500m"
         ports:
         - containerPort: 8081
 ---
