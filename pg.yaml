@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  namespace: itsmetommy
   name: postgres-demo
 spec:
   serviceName: "postgres"
@@ -31,7 +30,6 @@ spec:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  namespace: itsmetommy
   name: postgres-config
   labels:
     app: postgres
@@ -43,7 +41,6 @@ data:
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: itsmetommy
   name: postgres
   labels:
     app: postgres
