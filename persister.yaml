@@ -19,8 +19,8 @@ spec:
         image: vincent36/ecg-persister:latest
         resources:
           requests:
-            memory: "2000Mi"
-            cpu: "250m"
+            memory: "2500Mi"
+            cpu: "500m"
         ports:
         - containerPort: 8080
 ---
